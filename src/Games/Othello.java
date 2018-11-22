@@ -80,11 +80,18 @@ public class Othello {
     }
     
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+    Scanner s = new Scanner(System.in);
 	Othello b = new Othello();
+	System.out.println("Enter total number of moves");
 	int n = s.nextInt();
 	boolean p1Turn = true;
 	while(n > 0) {
+		if(p1Turn) {
+			System.out.println("Enter player 1's coordinates of board");
+		}
+		else {
+			System.out.println("Enter player 2's coordinates of board");
+		}
 		int x = s.nextInt();
 		int y = s.nextInt();
 		boolean ans = false;
@@ -100,7 +107,7 @@ public class Othello {
 			n--;
 		}
 		else {
-			System.out.println(ans);
+			System.out.println("Incorrect Move! Enter Again");
 		}
 	}
     }
